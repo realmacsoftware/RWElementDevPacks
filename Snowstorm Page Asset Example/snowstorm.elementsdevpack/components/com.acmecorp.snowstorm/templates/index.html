@@ -1,0 +1,16 @@
+
+	<div class="text-5xl text-center text-brand-100">
+		Snow Demo (Page Asset Version)
+	</div>
+	<div class="text-2xl text-center text-brand-400">
+		Preview in browser to see snow.
+	</div>
+
+@portal(headEnd, includeOnce: true)
+	<script src="{{assetPath}}/snowstorm.js"></script>
+	<script>
+		snowStorm.flakesMaxActive = {{snowAmount}};
+		snowStorm.followMouse = {{followMouse}};
+	</script>
+@endportal
+

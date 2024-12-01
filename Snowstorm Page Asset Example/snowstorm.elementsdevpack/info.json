@@ -1,0 +1,6 @@
+{
+  "version" : 1,
+  "author" : "Acme Corp",
+  "identifier" : "com.acmecorp.snowstorm",
+  "build" : 100
+}

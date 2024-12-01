@@ -1,0 +1,27 @@
+{
+    "groups": [{
+        "title": "Snow Settings",
+        "properties": [{
+            "title": "Amount",
+            "id": "snowAmount",
+            "format": "{{value}}",
+            "slider": {
+                "default": 50,
+                "min": 0,
+                "max": 512,
+                "round": true
+            }
+        },
+        {
+    "title": "Follow Mouse",
+    "id": "followMouse",
+    "responsive": false,
+    "switch": {
+        "trueValue": "true",
+        "falseValue": "false",
+        "default": true
+    }
+} 
+        ]
+    }]
+}
