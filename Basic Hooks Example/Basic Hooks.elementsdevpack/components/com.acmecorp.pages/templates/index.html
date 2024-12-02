@@ -1,0 +1,6 @@
+<div id="{{id}}" class="pt-5 pb-5 rounded-lg bg-surface-200 text-lg text-center text-text-200">
+Top level pages in project:
+@each(page in pages)
+	<a href="{{ page.url }}" class="block text-brand-600 font-body text-lg hover:underline hover:text-brand-700">{{ page.title }}</a>
+@endeach
+</div>
