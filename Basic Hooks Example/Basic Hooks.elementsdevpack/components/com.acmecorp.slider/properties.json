@@ -1,0 +1,19 @@
+{
+    "groups": [{
+        "title" : "Content",
+        "icon": "wand.and.rays",
+        "properties" : [ 
+{
+    "title" : "slider",
+    "property" : "slider",
+    "slider": {
+        "default" : 5,
+        "min" : 1,
+        "max" : 50,
+        "round" : true,
+    }
+}
+        
+        ]
+    }]
+}
