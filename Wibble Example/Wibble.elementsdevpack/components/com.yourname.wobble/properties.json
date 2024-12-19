@@ -11,6 +11,28 @@
                     "max": 100,
                     "round": true
                 }
-            }]
+            },
+        {
+            "title": "Fruit",
+            "id": "fruitChoice",
+            "select": {
+                "default": "Apple",
+                "items": [{
+                    "value": "Apple",
+                    "title": "Apple"
+                }, {
+                    "value": "Orange",
+                    "title": "Orange"
+                }, {
+                    "value": "Pear",
+                    "title": "Pear"
+                }, {
+                    "value": "Plumb",
+                    "title": "Plumb"
+                }]
+            }
+        }
+
+        ]
         }]
     }

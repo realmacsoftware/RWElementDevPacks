@@ -1,1 +1,9 @@
-<div class="text-brand-500 p-4">Hello you, I'm {{age}}</div>
+<div class="text-brand-500 p-4">Hello, I'm {{age}}, My favourite fruit is an {{fruitChoice}}! </div>
+
+<div class="text-red-500 p-4">
+	<button onclick="showAlert({ age: '{{age}}'});">How Old Am I?</button>
+</div>
+
+@portal(headEnd, includeOnce: true)
+	<script src="{{assetPath}}/alert.js"></script>
+@endportal
