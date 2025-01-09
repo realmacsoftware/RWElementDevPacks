@@ -1,0 +1,16 @@
+{
+    "groups": [{
+        "title": "Settings",
+        "properties": [{
+            "title": "Color",
+            "id": "bgColor",
+            "format": "bg-{{value}}",
+            "themeColor": {
+                "default": {
+                    "name": "brand",
+                    "brightness": 500
+                }
+            }
+        }]
+    }]
+}

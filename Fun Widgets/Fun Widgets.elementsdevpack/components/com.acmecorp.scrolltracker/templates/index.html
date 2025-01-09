@@ -1,0 +1,35 @@
+@if(edit)   
+<!--
+<div class="h-{{barHeight}}">
+</div>
+-->
+@else
+
+@endif
+
+  <div x-data="scrollProgress" class="fixed top-{{barInset}} left-{{barInset}} right-{{barInset}} z-50">
+	<div 
+	  class="w-full h-{{barHeight}} {{trackColor}} {{opacity}} backdrop-blur-[{{blur}}px] {{borderRadius}} overflow-hidden {{boxShadow}}">
+	  <div 
+		class="h-full @if(edit) w-[35%] @endif bg-gradient-to-r {{firstColor}} {{secondColor}} {{thirdColor}} {{borderRadius}} transition-all duration-0" :style="{ width: `${scrollPercentage}%` }">
+	  </div>
+	</div>
+  </div>
+ 
+@portal(headEnd)
+<!-- Alpine.js Script for ScrollTracker-->
+  <script>
+	document.addEventListener('alpine:init', () => {
+	  Alpine.data('scrollProgress', () => ({
+		scrollPercentage: 0,
+		init() {
+		  window.addEventListener('scroll', () => {
+			const scrollTop = Math.max(0, window.scrollY); // Prevent negative values
+			const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+			this.scrollPercentage = Math.min((scrollTop / docHeight) * 100, 100); // Clamp value between 0 and 100
+		  });
+		},
+	  }));
+	});
+  </script>
+@endportal

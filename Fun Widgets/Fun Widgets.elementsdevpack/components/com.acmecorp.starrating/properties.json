@@ -1,0 +1,87 @@
+{
+    "groups": [{
+        "title": "Rating",
+        "icon":"star.fill",
+        "properties": [
+            {
+                "title": "Ratings",
+                "id": "starRating",
+                   "slider": {
+                       "default": 3,
+                       "min": 0,
+                       "max": 5,
+                       "ticks": 6,
+                       "units":"★",
+                       "round": true,
+                       "snap": true
+                }
+            },
+            {
+                "title": "Alignment",
+                "id": "starAlignment",
+                "segmented": {
+                    "default": {
+                        "base": "justify-center"
+                    },
+                    "items": [{
+                        "value": "justify-start",
+                        "icon": "text.alignleft"
+                    }, {
+                        "value": "justify-center",
+                        "icon": "text.aligncenter",
+                        "default": true
+                    }, {
+                        "value": "justify-end",
+                        "icon": "text.alignright"
+                    }]  
+                }
+            },
+            {
+                "title": "Spacing",
+                "id": "starSpace",
+                "format": "space-x-{{value}}",
+                "themeSpacing": {
+                    "mode": "single",
+                    "default": {
+                        "base": {
+                            "value": "2"
+                        }
+                    }
+                }
+            },
+            {
+                "title": "Size",
+                "id": "starSize",
+                "themeTextStyle": {
+                    "default": {
+                        "base": {
+                            "name": "3xl"
+                        }
+                    }
+                }
+            },
+            {
+            "title": "Full",
+            "id": "starColor",
+            "format": "text-{{value}}",
+            "themeColor": {
+                "default": {
+                    "name": "brand",
+                    "brightness": 500
+                }
+            }
+        },
+        {
+            "title": "Empty",
+            "id": "emptyStarColor",
+            "format": "text-{{value}}",
+            "themeColor": {
+                "default": {
+                    "name": "surface",
+                    "brightness": 100
+                }
+            }
+        }
+        ]
+    }]
+}

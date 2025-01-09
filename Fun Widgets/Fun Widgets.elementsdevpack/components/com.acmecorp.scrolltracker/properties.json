@@ -1,0 +1,133 @@
+    {
+        "groups": [{
+            "title": "Style",
+            "icon": "paintbrush.pointed.fill",
+            "properties": [
+                {
+                    "title": "Height",
+                    "id": "barHeight",
+                    "themeSpacing": {
+                        "mode": "single",
+                        "default": {
+                            "base": {
+                                "value": "4"
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Inset",
+                    "id": "barInset",
+                    "format": "{{value}}",
+                    "themeSpacing": {
+                        "mode": "single",
+                        "default": {
+                            "base": {
+                                "value": "0"
+                            }
+                        }
+                    }
+                },
+                {
+                  "title": "Radius",
+                  "id": "borderRadius",
+                  "themeBorderRadius": {
+                    "default": {
+                      "base": {
+                        "topRight": "none",
+                        "topLeft": "none",
+                        "bottomRight": "none",
+                        "bottomLeft": "none"
+                      }
+                    }
+                  }
+                },
+                {
+                    "title": "Shadow",
+                    "id": "boxShadow",
+                    "themeShadow": {
+                        "default": {
+                            "name": "DEFAULT"
+                        }
+                    }
+                },
+            ]
+        },
+        {
+        "title": "Colour",
+        "icon": "paintpalette.fill",
+        "properties": [
+            {
+                "title": "From",
+                "id": "firstColor",
+                "format": "from-{{value}}",
+                "themeColor": {
+                    "default": {
+                        "name": "blue",
+                        "brightness": 500
+                    }
+                }
+            },
+            {
+                "title": "Via",
+                "id": "secondColor",
+                "format": "via-{{value}}",
+                "themeColor": {
+                    "default": {
+                        "name": "purple",
+                        "brightness": 500
+                    }
+                }
+            },
+            {
+                "title": "To",
+                "id": "thirdColor",
+                "format": "to-{{value}}",
+                "themeColor": {
+                    "default": {
+                        "name": "pink",
+                        "brightness": 500
+                    }
+                }
+            },
+            {
+                "information": {},
+                "title": "Track Details"
+            },
+            {
+                "title": "Background",
+                "id": "trackColor",
+                "format": "bg-{{value}}",
+                "themeColor": {
+                    "default": {
+                        "name": "surface",
+                        "brightness": 100
+                    }
+                }
+            },
+            {
+                "title": "Opacity",
+                "id": "opacity",
+                "format": "bg-opacity-[{{value}}%]",
+                "slider": {
+                    "default": 50,
+                    "min": 0,
+                    "max": 100,
+                    "units": "%",
+                    "round": true
+                }
+            },
+            {
+                "title": "Blur",
+                "id": "blur",
+                "text": {
+                "default": "6",
+                    "subtitle": "px"
+                }
+            },
+            
+        ]
+        }
+    
+    ]
+    }
