@@ -1,0 +1,16 @@
+    {
+        "groups": [{
+            "title": "Personal Details",
+            "properties": [{
+                "title": "Age",
+                "id": "age",
+                "format": "{{value}} years old",
+                "slider": {
+                    "default": 26,
+                    "min": 10,
+                    "max": 100,
+                    "round": true
+                }
+            }]
+        }]
+    }
