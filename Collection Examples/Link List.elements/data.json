@@ -2,127 +2,67 @@
   "privacy" : {
     "anonymiseThirdPartyRequests" : false
   },
+  "siteResources" : {
+    "children" : {
+      "C77823BB-6975-43AC-87BB-ED4371F11652" : [
+
+      ]
+    },
+    "resources" : {
+      "C77823BB-6975-43AC-87BB-ED4371F11652" : {
+        "hostedImageURLs" : [
+
+        ],
+        "timeStamp" : -62135769600000,
+        "identifier" : "C77823BB-6975-43AC-87BB-ED4371F11652",
+        "changedStatuses" : {
+
+        },
+        "expanded" : true,
+        "kind" : 0,
+        "smartFolderKind" : 0,
+        "name" : "Resources"
+      }
+    },
+    "root" : "C77823BB-6975-43AC-87BB-ED4371F11652"
+  },
   "social" : {
     "useSocialTags" : true
   },
-  "rootPage" : {
-    "kind" : "folder",
-    "createdDate" : 1739396764677.4312,
-    "browserTitle" : null,
-    "pageDescription" : null,
-    "iconIdentifier" : null,
-    "expanded" : true,
-    "children" : [
-      {
-        "pageDescription" : null,
-        "kind" : "page",
-        "iconIdentifier" : null,
-        "identifier" : "75A778A0-D199-4ACB-8444-A31F6E5681AA",
-        "browserTitle" : null,
-        "attributes" : {
-          "expiryQuantity" : 2,
-          "credit" : true,
-          "expires" : false,
-          "expiryUnit" : 0,
-          "filename" : "index.html",
-          "customCopyright" : "",
-          "useCustomSiteTitle" : false,
-          "hidden" : false,
-          "customHeadEnd" : "",
-          "encoding" : 1,
-          "customHeadStart" : "",
-          "customHeader" : "",
-          "customPageStart" : "",
-          "useCustomCopyright" : false,
-          "customCSS" : "",
-          "shouldEnableRobotTags" : true,
-          "changedStatuses" : {
-            "default" : true
-          },
-          "shouldIndexPage" : true,
-          "customJavaScript" : "",
-          "linkOpensInNewWindow" : false,
-          "lastChangedDate" : 1739403017043.497,
-          "customSiteTitle" : "",
-          "shouldEnableSocialTags" : true,
-          "shouldFollowLinks" : true,
-          "customBodyStart" : "",
-          "customPageEnd" : "",
-          "customBodyEnd" : "",
-          "enabled" : true,
-          "useCustomSlogan" : false,
-          "customSlogan" : ""
-        },
-        "isIndex" : true,
-        "children" : [
+  "publishing" : {
+    "publishSettingsConfigured" : false,
+    "publishingDestinations" : [
 
-        ],
-        "title" : "Home",
-        "createdDate" : 1739396764687.544,
-        "uniqueID" : "page0",
-        "expanded" : true
-      }
-    ],
-    "identifier" : "95AEF32B-EF00-4B36-89E1-9084BBAED565",
-    "attributes" : {
-      "customSlogan" : "",
-      "hidden" : false,
-      "expiryQuantity" : 2,
-      "customPageEnd" : "",
-      "customSiteTitle" : "",
-      "customPageStart" : "",
-      "expiryUnit" : 0,
-      "customBodyStart" : "",
-      "customHeadEnd" : "",
-      "useCustomCopyright" : false,
-      "credit" : true,
-      "filename" : "",
-      "useCustomSlogan" : false,
-      "expires" : false,
-      "shouldEnableSocialTags" : true,
-      "customCopyright" : "",
-      "shouldFollowLinks" : true,
-      "linkOpensInNewWindow" : false,
-      "encoding" : 1,
-      "customHeadStart" : "",
-      "customHeader" : "",
-      "customBodyEnd" : "",
-      "changedStatuses" : {
-
-      },
-      "lastChangedDate" : 1739396764677.314,
-      "shouldEnableRobotTags" : true,
-      "useCustomSiteTitle" : false,
-      "enabled" : true,
-      "customCSS" : "",
-      "customJavaScript" : "",
-      "shouldIndexPage" : true
-    },
-    "isIndex" : false,
-    "title" : "root",
-    "uniqueID" : ""
+    ]
   },
-  "globalElements" : {
-    "globals" : {
+  "customComponents" : {
+    "components" : {
 
     }
   },
-  "publishing" : {
-    "publishingDestinations" : [
+  "localization" : {
 
-    ],
-    "publishSettingsConfigured" : false
   },
+  "site" : {
+    "consolidateCSSFiles" : true,
+    "wantsXMLSiteMap" : true,
+    "cruftlessLinks" : true,
+    "title" : "My Website",
+    "commonFileConsolidationMode" : 0,
+    "minifyExtraFiles" : true,
+    "baseURL" : "",
+    "themeName" : "Elements",
+    "allowDarkMode" : true,
+    "defaultFileExtension" : "html",
+    "useCacheBusting" : true
+  },
+  "identifier" : "2DA05463-F046-4461-A31A-60D1F381652F",
   "images" : {
     "logoAltText" : "",
     "webIcons" : {
       "faviconLarge" : {
-        "type" : 4,
-        "autoGenerate" : false
-      },
-      "large" : {
-        "type" : 0,
-        "autoGenerate" : false
+        "autoGenerate" : false,
+        "type" : 4
       },
       "small" : {
         "type" : 2,
@@ -132,193 +72,253 @@
         "type" : 3,
         "autoGenerate" : false
       },
+      "faviconMedium" : {
+        "autoGenerate" : false,
+        "type" : 5
+      },
       "medium" : {
         "autoGenerate" : false,
         "type" : 1
       },
-      "faviconMedium" : {
-        "type" : 5,
+      "faviconSmall" : {
+        "type" : 6,
         "autoGenerate" : false
       },
-      "faviconSmall" : {
-        "autoGenerate" : false,
-        "type" : 6
+      "large" : {
+        "type" : 0,
+        "autoGenerate" : false
       }
     }
   },
   "ui" : {
-    "resourceInspector" : {
+    "projectInspector" : {
       "show" : false
     },
-    "contentArea" : {
-      "darkAppearance" : false,
-      "size" : [
-        890.8046875,
-        708
-      ],
-      "responsiveSize" : "md",
-      "scale" : 1
+    "resourceInspector" : {
+      "show" : false
     },
     "catalogFilter" : {
       "showFavourites" : false,
       "smartDocumentElements" : false
     },
-    "elementEditor" : {
-      "showOutline" : false,
-      "show" : false,
-      "showDebugger" : false
-    },
-    "projectInspector" : {
-      "show" : false
-    }
-  },
-  "customComponents" : {
-    "components" : {
-
-    }
-  },
-  "siteResources" : {
-    "children" : {
-      "C77823BB-6975-43AC-87BB-ED4371F11652" : [
-
+    "contentArea" : {
+      "scale" : 0.9846678023850085,
+      "responsiveSize" : "lg",
+      "darkAppearance" : false,
+      "size" : [
+        1174,
+        708
       ]
     },
-    "resources" : {
-      "C77823BB-6975-43AC-87BB-ED4371F11652" : {
-        "name" : "Resources",
-        "smartFolderKind" : 0,
-        "kind" : 0,
-        "changedStatuses" : {
-
-        },
-        "expanded" : true,
-        "timeStamp" : -62135769600000,
-        "identifier" : "C77823BB-6975-43AC-87BB-ED4371F11652",
-        "hostedImageURLs" : [
-
-        ]
-      }
-    },
-    "root" : "C77823BB-6975-43AC-87BB-ED4371F11652"
-  },
-  "theme" : {
-    "fontStyle" : [
-
-    ],
-    "baseThemeIdentifier" : "com.realmacsoftware.themes.system",
-    "spacing" : [
-
-    ],
-    "borderRadius" : [
-
-    ],
-    "borderWidth" : [
-
-    ],
-    "typographies" : [
-
-    ],
-    "fontFamily" : [
-
-    ],
-    "colors" : [
-
-    ],
-    "shadows" : [
-
-    ],
-    "screens" : [
-      {
-        "maxContainerWidth" : 0,
-        "enabled" : false,
-        "sfIcon" : "desktopcomputer",
-        "units" : "auto",
-        "description" : "",
-        "name" : "2xl",
-        "pixels" : 1536,
-        "id" : "7B1A10BE-DA86-4BAB-87AB-23EA24273D6E",
-        "classPrefix" : "2xl"
-      },
-      {
-        "units" : "auto",
-        "description" : "",
-        "pixels" : 1280,
-        "maxContainerWidth" : 0,
-        "sfIcon" : "laptopcomputer",
-        "name" : "xl",
-        "enabled" : false,
-        "id" : "293E0ED0-D15E-4A33-85F9-2AEFBF98132C",
-        "classPrefix" : "xl"
-      },
-      {
-        "name" : "lg",
-        "id" : "88F6953C-B899-43C7-A941-1D131EC55869",
-        "units" : "auto",
-        "description" : "",
-        "sfIcon" : "ipad.landscape",
-        "maxContainerWidth" : 0,
-        "enabled" : true,
-        "classPrefix" : "lg",
-        "pixels" : 1024
-      },
-      {
-        "enabled" : true,
-        "sfIcon" : "ipad",
-        "maxContainerWidth" : 0,
-        "classPrefix" : "md",
-        "description" : "This breakpoint is for tablets and small laptop screens. It usually encompasses widths from 600 pixels to 1023 pixels.",
-        "pixels" : 768,
-        "name" : "md",
-        "units" : "auto",
-        "id" : "583D017B-EB76-4D85-9A80-956C9A2E6577"
-      },
-      {
-        "sfIcon" : "iphone.landscape",
-        "description" : "This breakpoint targets devices with small sceens like smartphones. The resolution width varies but typically starts from 320 pixels and below 600 pixels.",
-        "pixels" : 640,
-        "enabled" : true,
-        "maxContainerWidth" : 0,
-        "units" : "auto",
-        "classPrefix" : "sm",
-        "id" : "BDB753AE-4CE3-4CFA-94BD-7C0F98672709",
-        "name" : "sm"
-      },
-      {
-        "description" : "",
-        "units" : "auto",
-        "pixels" : 0,
-        "classPrefix" : "",
-        "sfIcon" : "iphone",
-        "id" : "40418B1F-C3AC-4541-ABA9-5193DADB88E7",
-        "enabled" : true,
-        "maxContainerWidth" : 0,
-        "name" : "mobile"
-      }
-    ],
-    "textShadows" : [
-
-    ]
-  },
-  "identifier" : "2DA05463-F046-4461-A31A-60D1F381652F",
-  "site" : {
-    "commonFileConsolidationMode" : 0,
-    "defaultFileExtension" : "html",
-    "themeName" : "Elements",
-    "baseURL" : "",
-    "cruftlessLinks" : true,
-    "useCacheBusting" : true,
-    "wantsXMLSiteMap" : true,
-    "title" : "My Website",
-    "consolidateCSSFiles" : true,
-    "allowDarkMode" : true,
-    "minifyExtraFiles" : true
+    "elementEditor" : {
+      "showOutline" : false,
+      "showDebugger" : false,
+      "show" : false
+    }
   },
   "project" : {
     "uniqueBackupName" : "AB394345-0B9A-4488-BAA7-1B5134240F3A_rwbackup",
     "autoStartWebServer" : false
   },
   "version" : 9,
-  "localization" : {
+  "rootPage" : {
+    "identifier" : "95AEF32B-EF00-4B36-89E1-9084BBAED565",
+    "uniqueID" : "",
+    "kind" : "folder",
+    "attributes" : {
+      "customHeadEnd" : "",
+      "shouldIndexPage" : true,
+      "useCustomSlogan" : false,
+      "shouldEnableSocialTags" : true,
+      "filename" : "",
+      "expiryUnit" : 0,
+      "customCSS" : "",
+      "customBodyStart" : "",
+      "lastChangedDate" : 1739396764677.314,
+      "customSiteTitle" : "",
+      "customSlogan" : "",
+      "customHeader" : "",
+      "customHeadStart" : "",
+      "expiryQuantity" : 2,
+      "customJavaScript" : "",
+      "enabled" : true,
+      "linkOpensInNewWindow" : false,
+      "encoding" : 1,
+      "shouldEnableRobotTags" : true,
+      "customBodyEnd" : "",
+      "hidden" : false,
+      "customPageStart" : "",
+      "shouldFollowLinks" : true,
+      "useCustomCopyright" : false,
+      "changedStatuses" : {
 
+      },
+      "customPageEnd" : "",
+      "credit" : true,
+      "customCopyright" : "",
+      "expires" : false,
+      "useCustomSiteTitle" : false
+    },
+    "children" : [
+      {
+        "iconIdentifier" : null,
+        "identifier" : "75A778A0-D199-4ACB-8444-A31F6E5681AA",
+        "expanded" : true,
+        "children" : [
+
+        ],
+        "uniqueID" : "page0",
+        "attributes" : {
+          "enabled" : true,
+          "customCopyright" : "",
+          "expiryQuantity" : 2,
+          "lastChangedDate" : 1739403413052.044,
+          "customPageEnd" : "",
+          "filename" : "index.html",
+          "credit" : true,
+          "customHeader" : "",
+          "useCustomSlogan" : false,
+          "encoding" : 1,
+          "customJavaScript" : "",
+          "customHeadStart" : "",
+          "useCustomCopyright" : false,
+          "customBodyStart" : "",
+          "linkOpensInNewWindow" : false,
+          "shouldEnableSocialTags" : true,
+          "customPageStart" : "",
+          "customSiteTitle" : "",
+          "useCustomSiteTitle" : false,
+          "expiryUnit" : 0,
+          "shouldEnableRobotTags" : true,
+          "customSlogan" : "",
+          "shouldIndexPage" : true,
+          "shouldFollowLinks" : true,
+          "changedStatuses" : {
+            "default" : true
+          },
+          "hidden" : false,
+          "customHeadEnd" : "",
+          "customBodyEnd" : "",
+          "customCSS" : "",
+          "expires" : false
+        },
+        "kind" : "page",
+        "isIndex" : true,
+        "createdDate" : 1739396764687.544,
+        "title" : "Home",
+        "pageDescription" : null,
+        "browserTitle" : null
+      }
+    ],
+    "title" : "root",
+    "isIndex" : false,
+    "browserTitle" : null,
+    "pageDescription" : null,
+    "iconIdentifier" : null,
+    "expanded" : true,
+    "createdDate" : 1739396764677.4312
+  },
+  "globalElements" : {
+    "globals" : {
+
+    }
+  },
+  "theme" : {
+    "spacing" : [
+
+    ],
+    "screens" : [
+      {
+        "name" : "2xl",
+        "pixels" : 1536,
+        "enabled" : false,
+        "units" : "auto",
+        "sfIcon" : "desktopcomputer",
+        "maxContainerWidth" : 0,
+        "classPrefix" : "2xl",
+        "description" : "",
+        "id" : "7B1A10BE-DA86-4BAB-87AB-23EA24273D6E"
+      },
+      {
+        "sfIcon" : "laptopcomputer",
+        "description" : "",
+        "enabled" : false,
+        "name" : "xl",
+        "classPrefix" : "xl",
+        "maxContainerWidth" : 0,
+        "units" : "auto",
+        "id" : "293E0ED0-D15E-4A33-85F9-2AEFBF98132C",
+        "pixels" : 1280
+      },
+      {
+        "sfIcon" : "ipad.landscape",
+        "pixels" : 1024,
+        "maxContainerWidth" : 0,
+        "units" : "auto",
+        "classPrefix" : "lg",
+        "name" : "lg",
+        "enabled" : true,
+        "description" : "",
+        "id" : "88F6953C-B899-43C7-A941-1D131EC55869"
+      },
+      {
+        "sfIcon" : "ipad",
+        "name" : "md",
+        "maxContainerWidth" : 0,
+        "classPrefix" : "md",
+        "description" : "This breakpoint is for tablets and small laptop screens. It usually encompasses widths from 600 pixels to 1023 pixels.",
+        "pixels" : 768,
+        "id" : "583D017B-EB76-4D85-9A80-956C9A2E6577",
+        "enabled" : true,
+        "units" : "auto"
+      },
+      {
+        "maxContainerWidth" : 0,
+        "units" : "auto",
+        "pixels" : 640,
+        "name" : "sm",
+        "description" : "This breakpoint targets devices with small sceens like smartphones. The resolution width varies but typically starts from 320 pixels and below 600 pixels.",
+        "id" : "BDB753AE-4CE3-4CFA-94BD-7C0F98672709",
+        "enabled" : true,
+        "classPrefix" : "sm",
+        "sfIcon" : "iphone.landscape"
+      },
+      {
+        "units" : "auto",
+        "sfIcon" : "iphone",
+        "name" : "mobile",
+        "description" : "",
+        "classPrefix" : "",
+        "pixels" : 0,
+        "id" : "40418B1F-C3AC-4541-ABA9-5193DADB88E7",
+        "enabled" : true,
+        "maxContainerWidth" : 0
+      }
+    ],
+    "borderWidth" : [
+
+    ],
+    "shadows" : [
+
+    ],
+    "typographies" : [
+
+    ],
+    "baseThemeIdentifier" : "com.realmacsoftware.themes.system",
+    "fontFamily" : [
+
+    ],
+    "colors" : [
+
+    ],
+    "textShadows" : [
+
+    ],
+    "borderRadius" : [
+
+    ],
+    "fontStyle" : [
+
+    ]
   }
 }
