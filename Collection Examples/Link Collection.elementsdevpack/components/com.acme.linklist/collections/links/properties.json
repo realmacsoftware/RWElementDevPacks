@@ -6,17 +6,19 @@
 				{
 					"title": "Title",
 					"property": "title",
+					"responsive": false,
 					"text": {
 						"default": ""
 					}
 				},
 				{
 					"title": "URL",
-					"property": "url",
-					"text": {
-						"default": ""
+					"id": "url",
+					"link": {
+						"subtitle": "Link to another page"
 					}
-				},
+				}
+,
 				{
 					"title": "Color",
 					"id": "rowColor",

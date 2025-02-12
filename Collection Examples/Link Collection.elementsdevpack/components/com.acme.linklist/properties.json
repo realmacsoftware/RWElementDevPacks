@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"title": "Link List",
+			"title": "Link Items",
 			"icon": "link",
 			"properties": [
 				{
@@ -12,6 +12,33 @@
 					}
 				}
 			]
+		},
+		{
+			"title": "Card",
+			"icon": "rectangle",
+			"properties": [{
+				"title": "Color",
+				"id": "cardColor",
+				"format": "bg-{{value}}",
+				"themeColor": {
+					"default": {
+						"name": "surface",
+						"brightness": 50
+					}
+				}
+			},
+			{
+				"title": "Shadow",
+				"id": "cardShadow",
+				"themeShadow": {
+					"default": {
+						"name": "lg"
+					}
+				}
+			}
+
+		
+		]
 		}
 	]
 }
