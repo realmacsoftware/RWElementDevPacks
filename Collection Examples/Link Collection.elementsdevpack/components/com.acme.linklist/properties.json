@@ -1,0 +1,17 @@
+{
+	"groups": [
+		{
+			"title": "Link List",
+			"icon": "link",
+			"properties": [
+				{
+					"title": "Links",
+					"property": "links",
+					"collection": {
+						"identifier": "com.acme.linklist.collections.links"
+					}
+				}
+			]
+		}
+	]
+}

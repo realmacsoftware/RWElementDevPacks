@@ -1,0 +1,35 @@
+{
+	"groups": [
+		{
+			"title" : "Link",
+			"properties" : [
+				{
+					"title": "Title",
+					"property": "title",
+					"text": {
+						"default": ""
+					}
+				},
+				{
+					"title": "URL",
+					"property": "url",
+					"text": {
+						"default": ""
+					}
+				},
+				{
+					"title": "Color",
+					"id": "rowColor",
+					"format": "bg-{{value}}",
+					"themeColor": {
+						"default": {
+							"name": "blue",
+							"brightness": 600
+						}
+					}
+				}
+
+			]
+		}
+	]
+}
