@@ -20,13 +20,24 @@
 				}
 ,
 				{
-					"title": "Color",
+					"title": "Background",
 					"id": "rowColor",
 					"format": "bg-{{value}}",
 					"themeColor": {
 						"default": {
 							"name": "blue",
-							"brightness": 600
+							"brightness": 500
+						}
+					}
+				},
+				{
+					"title": "Hover",
+					"id": "rowColorHover",
+					"format": "bg-{{value}}",
+					"themeColor": {
+						"default": {
+							"name": "blue",
+							"brightness": 700
 						}
 					}
 				}
