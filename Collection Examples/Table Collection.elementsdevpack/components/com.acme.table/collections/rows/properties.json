@@ -1,0 +1,42 @@
+{
+	"groups": [
+		{
+			"title" : "Link",
+			"properties" : [
+				{
+					"title": "Column 1",
+					"property": "column1",
+					"responsive": false,
+					"text": {
+						"default": ""
+					}
+				},
+				{
+					"title": "Column 2",
+					"property": "column2",
+					"responsive": false,
+					"text": {
+						"default": ""
+					}
+				},
+				{
+					"title": "Column 3",
+					"property": "column3",
+					"responsive": false,
+					"text": {
+						"default": ""
+					}
+				},
+				{
+					"title": "Column 4",
+					"property": "column4",
+					"responsive": false,
+					"text": {
+						"default": ""
+					}
+				},
+
+			]
+		}
+	]
+}

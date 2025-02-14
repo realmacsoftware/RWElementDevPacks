@@ -1,0 +1,20 @@
+<table class="min-w-full {{borderWidth}} {{borderColor}}">
+  <thead>
+	<tr class="{{headerColor}}">
+	  <th class="{{borderWidth}} {{borderColor}} px-4 py-2 text-left">@text("column1", default: "Column 1")</th>
+	  <th class="{{borderWidth}} {{borderColor}} px-4 py-2 text-left">@text("column2", default: "Column 2")</th>
+	  <th class="{{borderWidth}} {{borderColor}} px-4 py-2 text-left">@text("column3", default: "Column 3")</th>
+	  <th class="{{borderWidth}} {{borderColor}} px-4 py-2 text-left">@text("column4", default: "Column 4")</th>
+	</tr>
+  </thead>
+  	<tbody>
+	  	@each(row in rows)
+		  	<tr>
+				<td class="{{borderWidth}} {{borderColor}} px-4 py-2">{{row.column1}}</td>
+				<td class="{{borderWidth}} {{borderColor}} px-4 py-2">{{row.column2}}</td>
+				<td class="{{borderWidth}} {{borderColor}} px-4 py-2">{{row.column3}}</td>
+				<td class="{{borderWidth}} {{borderColor}} px-4 py-2">{{row.column4}}</td>
+			  </tr>
+		@endeach
+  </tbody>
+</table>

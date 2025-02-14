@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "title": "Rows",
+      "icon": "tablecells",
+      "properties": [
+        {
+          "title": "Links",
+          "property": "links",
+          "collection": {
+            "identifier": "com.acme.table.collections.rows"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Table",
+      "icon": "rectangle",
+      "properties": [
+        {
+          "title": "Header",
+          "id": "headerColor",
+          "format": "bg-{{value}}",
+          "themeColor": {
+            "default": {
+              "name": "gray",
+              "brightness": 200
+            }
+          }
+        },
+        {
+          "title": "Border",
+          "id": "borderColor",
+          "format": "border-{{value}}",
+          "themeColor": {
+            "default": {
+              "name": "gray",
+              "brightness": 400
+            }
+          }
+        },
+        {
+            "title": "Width",
+            "id": "borderWidth",
+            "themeBorderWidth": {
+                "default": {
+                    "base": {
+                        "top": "2",
+                        "right": "2",
+                        "bottom": "2",
+                        "left": "2"
+                    }
+                }
+            }
+        }
+
+      ]
+    }
+  ]
+}
