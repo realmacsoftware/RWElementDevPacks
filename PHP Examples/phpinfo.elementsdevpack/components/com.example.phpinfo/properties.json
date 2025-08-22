@@ -1,0 +1,13 @@
+{
+    "groups": [{
+        "title": "PHP Info Settings",
+        "properties": [{
+            "title": "Show PHP Info",
+            "id": "showPhpInfo",
+            "responsive": false,
+            "switch": {
+                "default": true
+            }
+        }]
+    }]
+}
