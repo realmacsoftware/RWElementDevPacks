@@ -1,0 +1,12 @@
+{
+    "groups": [{
+        "title": "Hello World Settings",
+        "properties": [{
+            "title": "Name",
+            "id": "name",
+            "text": {
+                "default": "World"
+            }
+        }]
+    }]
+} 
