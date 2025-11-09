@@ -1,0 +1,37 @@
+{
+    "groups": [{
+        "title": "Lock Settings",
+        "properties": [{
+            "title": "Show Login",
+            "id": "showLogin",
+            "responsive": false,
+            "switch": {
+                "default": true
+            }
+        },
+        {
+            "title": "Password",
+            "id": "password",
+            "text": {
+            "default": "password"
+            }
+        },
+        {
+            "title": "Page ID",
+            "id": "pageID",
+            "text": {
+            "default": "page_id",
+                "subtitle": "Can be shared with other pages"
+            }
+        },
+        {
+            "title": "Login",
+            "id": "loginButton",
+            "text": {
+            "default": "Unlock",
+            "subtitle": "Login button text"
+            }
+        }
+    ]
+    }]
+}

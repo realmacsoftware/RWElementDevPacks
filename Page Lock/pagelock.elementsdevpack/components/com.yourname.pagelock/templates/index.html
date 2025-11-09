@@ -1,0 +1,74 @@
+@portal(pageStart)
+<?php
+session_start();
+
+$pagePassword = '{{password}}';
+$errorMessage = null;
+
+if (isset($_GET['logout'])) {
+	unset($_SESSION['{{pageID}}']);
+	header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?'));
+	exit;
+}
+
+if (!empty($_POST['password'])) {
+	if (hash_equals($pagePassword, $_POST['password'])) {
+		$_SESSION['{{pageID}}'] = true;
+	} else {
+		$errorMessage = 'Incorrect password. Please try again.';
+	}
+}
+
+$isAuthenticated = !empty($_SESSION['{{pageID}}']);
+?>
+@endportal
+
+<?php if (!$isAuthenticated): ?>
+	@if(showLogin)
+		<section class="flex w-full px-6 py-16">
+			<div class="mx-auto flex w-full max-w-4xl flex-1 flex-col items-center justify-center">
+				<div class="w-full max-w-lg rounded border border-surface-200 bg-surface-100 p-10 dark:border-surface-800 dark:bg-surface-900">
+					<div class="flex flex-col gap-6">
+						<header class="space-y-2 text-center">
+							<h2 class="text-2xl font-semibold font-heading text-text-100 dark:text-text-900">@text("heading", default: "Shhh… It’s a Secret")</h2>
+							<?php if ($errorMessage): ?>
+								<p class="text-sm font-bold text-red-500"><?= htmlspecialchars($errorMessage, ENT_QUOTES, 'UTF-8') ?></p>
+							<?php else: ?>
+								<p class="text-sm text-text-500 dark:text-text-700">@text("subtitle", default: "Type the magic word to reveal what's inside.")</p>
+							<?php endif; ?>
+						</header>
+
+						<form method="post" class="flex flex-col gap-5">
+							<input
+								type="password"
+								name="password"
+								id="password"
+								required
+								placeholder="••••••••"
+								class="w-full rounded border border-surface-200 bg-white px-4 py-3 text-text-600 transition placeholder:text-text-800 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/50 dark:border-surface-800 dark:bg-black dark:text-text-800 dark:placeholder:text-text-600"
+								@if(edit) disabled @endif
+							>
+							<button
+								type="submit"
+								class="inline-flex items-center justify-center gap-2 rounded bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+								@if(edit) disabled @endif
+							>
+								{{loginButton}}
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	@endif
+<?php else: ?>
+
+	@dropzone("secret-content", title: "Secret Content")
+
+	<div class="fixed bottom-6 right-6 z-[9999]">
+		<a href="?logout=1" class="inline-flex items-center gap-2 rounded bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-brand-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+			@text("logout-button", default: "Log Out")
+		</a>
+	</div>
+
+<?php endif; ?>
