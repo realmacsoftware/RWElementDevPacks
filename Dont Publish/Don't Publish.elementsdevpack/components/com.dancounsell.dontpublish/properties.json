@@ -1,0 +1,21 @@
+{
+    "groups": [
+        {
+            "title": "Switch Example",
+            "properties": [
+                {
+                    "information": {},
+                    "title": "Content will always be hidden in Preview or Published."
+                },
+                {
+                    "title": "Visible",
+                    "id": "display",
+                    "responsive": false,
+                    "switch": {
+                        "default": true
+                    }
+                }
+            ]
+        }
+    ]
+}
