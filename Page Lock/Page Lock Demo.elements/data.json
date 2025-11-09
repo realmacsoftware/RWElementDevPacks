@@ -1,6 +1,97 @@
 {
-  "social" : {
-    "useSocialTags" : true
+  "customComponents" : {
+    "components" : {
+      "D8BDC494-EBD2-4FA2-99AD-95301AFB1AFA" : {
+        "hidden" : false,
+        "deprecated" : false,
+        "uuid" : "02301DB4-170D-4059-B2ED-3A72C8EE5FE9",
+        "files" : [
+          {
+            "identifier" : "0924EB7D-8E81-4EBE-B2CD-B4AD1E2EAB18",
+            "kind" : {
+              "template" : {
+
+              }
+            },
+            "filename" : "Template",
+            "content" : "@portal(pageStart)\n<?php\nsession_start();\n\n$pagePassword = 'changeme';\n$errorMessage = null;\n\nif (isset($_GET['logout'])) {\n    unset($_SESSION['authenticated']);\n    header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?'));\n    exit;\n}\n\nif (!empty($_POST['password'])) {\n    if (hash_equals($pagePassword, $_POST['password'])) {\n        $_SESSION['authenticated'] = true;\n    } else {\n        $errorMessage = 'Incorrect password. Please try again.';\n    }\n}\n\n$isAuthenticated = !empty($_SESSION['authenticated']);\n?>\n@endportal\n\n    <?php if (!$isAuthenticated): ?>\n        <div class=\"w-full max-w-sm\">\n            <div class=\"bg-slate-900\/60 backdrop-blur border border-slate-700 rounded-xl shadow-lg p-8\">\n                <h1 class=\"text-xl font-semibold mb-2 text-white\">Enter Password<\/h1>\n                <p class=\"text-sm text-slate-300 mb-6\">This page is locked. Please enter the password to continue.<\/p>\n                <?php if ($errorMessage): ?>\n                    <div class=\"mb-4 rounded-lg bg-red-500\/20 border border-red-500\/50 text-red-200 px-3 py-2 text-sm\">\n                        <?= htmlspecialchars($errorMessage, ENT_QUOTES, 'UTF-8') ?>\n                    <\/div>\n                <?php endif; ?>\n                <form method=\"post\" class=\"space-y-4\" x-data=\"{ isProcessing: false }\" x-on:submit=\"isProcessing = true\">\n                    <div>\n                        <label for=\"password\" class=\"block text-sm font-medium text-slate-200 mb-1\">Password<\/label>\n                        <input\n                            type=\"password\"\n                            name=\"password\"\n                            id=\"password\"\n                            required\n                            class=\"w-full rounded-lg border border-slate-700 bg-slate-900\/70 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition\"\n                            placeholder=\"••••••••\"\n                        >\n                    <\/div>\n                    <button\n                        type=\"submit\"\n                        class=\"inline-flex w-full items-center justify-center rounded-lg bg-blue-500 hover:bg-blue-400 active:bg-blue-600 px-4 py-2 font-medium text-white transition disabled:opacity-60 disabled:cursor-not-allowed\"\n                        x-bind:disabled=\"isProcessing\"\n                    >\n                        <span x-show=\"!isProcessing\">Unlock<\/span>\n                        <span x-cloak x-show=\"isProcessing\" class=\"flex items-center gap-2\">\n                            <svg class=\"h-4 w-4 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\">\n                                <circle class=\"opacity-25\" cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"4\"><\/circle>\n                                <path class=\"opacity-75\" fill=\"currentColor\" d=\"M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z\"><\/path>\n                            <\/svg>\n                            Processing...\n                        <\/span>\n                    <\/button>\n                <\/form>\n            <\/div>\n        <\/div>\n    <?php else: ?>\n        <div class=\"w-full max-w-2xl\">\n            <div class=\"bg-slate-900\/60 backdrop-blur border border-slate-700 rounded-xl shadow-lg p-10 space-y-6\">\n                <div class=\"flex items-center justify-between\">\n                    <div>\n                        <p class=\"text-sm uppercase tracking-wide text-blue-400\">Access Granted<\/p>\n                        <h1 class=\"text-2xl font-semibold text-white mt-1\">Welcome to the protected content<\/h1>\n                    <\/div>\n                    <a href=\"?logout=1\" class=\"inline-flex items-center rounded-lg border border-slate-700 px-3 py-2 text-sm text-slate-300 hover:bg-slate-800 transition\">\n                        Log out\n                    <\/a>\n                <\/div>\n                <div class=\"prose prose-invert max-w-none\">\n                    <p>\n                        This is your protected page. Replace this content with whatever should only be visible to authenticated viewers.\n                    <\/p>\n                    <p class=\"text-slate-300\">\n                        Tailwind CSS provides the layout and styling, while Alpine.js handles a tiny bit of interactivity for the loading state.\n                    <\/p>\n                <\/div>\n            <\/div>\n        <\/div>\n    <?php endif; ?>"
+          },
+          {
+            "identifier" : "E40CD8AF-EF90-4BFF-9FCE-E19917A5B55F",
+            "kind" : {
+              "css" : {
+
+              }
+            },
+            "filename" : "Styles",
+            "content" : ""
+          },
+          {
+            "identifier" : "28E57E6C-F46D-433A-9CAB-195453952EF1",
+            "kind" : {
+              "js" : {
+
+              }
+            },
+            "filename" : "Javascript",
+            "content" : "console.log(`Running JS for element with id: {{id}}`)"
+          },
+          {
+            "identifier" : "73303F16-FA67-470E-AA51-FF08318198AE",
+            "kind" : {
+              "hooks" : {
+
+              }
+            },
+            "filename" : "Hooks",
+            "content" : ""
+          },
+          {
+            "identifier" : "DC7214DB-2329-42F1-BBDC-96B82231C8B5",
+            "kind" : {
+              "properties" : {
+
+              }
+            },
+            "filename" : "Properties",
+            "content" : ""
+          },
+          {
+            "identifier" : "0CC96221-D2CB-41E3-A20A-43C5FD23C2CA",
+            "kind" : {
+              "data" : {
+
+              }
+            },
+            "filename" : "Data",
+            "content" : "{\n    \"collections\": [{\n        \"id\" : \"F8A7DF12-9196-4EF0-A1DB-C35F39401941\",\n        \"title\" : \"Features\",\n        \"items\" : [{\n            \"id\" : \"2DA6C715-0A28-4287-9E2B-EA50078AEF23\",\n            \"featureName\" : \"Data Driven\",\n            \"body\" : \"A dynamic and user-friendly platform offering a wide range of services and information.\"\n        }]\n    }]\n}"
+          }
+        ],
+        "collections" : [
+
+        ],
+        "title" : "Protect Content",
+        "author" : "",
+        "subTitle" : "",
+        "version" : "",
+        "identifier" : "D8BDC494-EBD2-4FA2-99AD-95301AFB1AFA",
+        "group" : "Custom",
+        "tags" : [
+
+        ],
+        "build" : ""
+      }
+    }
+  },
+  "localization" : {
+
+  },
+  "project" : {
+    "uniqueBackupName" : "28BB8126-9BFC-47AF-BB59-863BE825C9F3_rwbackup",
+    "autoStartWebServer" : false
+  },
+  "privacy" : {
+    "anonymiseThirdPartyRequests" : false
   },
   "publishing" : {
     "publishSettingsConfigured" : false,
@@ -8,54 +99,277 @@
 
     ]
   },
-  "rootPrefabNode" : {
-    "expanded" : true,
-    "identifier" : "E6DB23D9-C943-4C00-B1BC-4F65C82BD020",
-    "title" : "Project",
-    "kind" : {
-      "folder" : {
+  "siteResources" : {
+    "resources" : {
+      "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A" : {
+        "timeStamp" : -62135769600000,
+        "name" : "Resources",
+        "expanded" : true,
+        "smartFolderKind" : 0,
+        "hostedImageURLs" : [
 
+        ],
+        "identifier" : "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A",
+        "kind" : 0,
+        "changedStatuses" : {
+
+        }
+      },
+      "5329E503-CC6A-42F2-B1B3-758B18C03C52" : {
+        "timeStamp" : 1750416112256.6924,
+        "name" : "flower.svg",
+        "expanded" : true,
+        "smartFolderKind" : 0,
+        "parentIdentifier" : "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A",
+        "originalName" : "flower.svg",
+        "typeIdentifier" : "public.svg-image",
+        "isSVG" : true,
+        "hostedImageURLs" : [
+
+        ],
+        "identifier" : "5329E503-CC6A-42F2-B1B3-758B18C03C52",
+        "kind" : 1,
+        "changedStatuses" : {
+
+        }
       }
     },
-    "children" : [
-
-    ],
-    "item" : null
+    "children" : {
+      "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A" : [
+        "5329E503-CC6A-42F2-B1B3-758B18C03C52"
+      ]
+    },
+    "root" : "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A"
   },
-  "localization" : {
-
-  },
+  "version" : 9,
   "uiStateIdentifier" : "FC10B4F6-A306-4D33-A8F0-EFA1C56BF296",
+  "rootPage" : {
+    "kind" : "folder",
+    "uniqueID" : "008DDB7B-780F-46A7-91C0-4116A6288AA9",
+    "isIndex" : false,
+    "expanded" : true,
+    "browserTitle" : null,
+    "title" : "root",
+    "iconIdentifier" : null,
+    "code" : null,
+    "createdDate" : 1762554261003.568,
+    "identifier" : "008DDB7B-780F-46A7-91C0-4116A6288AA9",
+    "pageDescription" : null,
+    "externalPageURL" : null,
+    "children" : [
+      {
+        "kind" : "page",
+        "uniqueID" : "page0",
+        "isIndex" : true,
+        "expanded" : true,
+        "browserTitle" : null,
+        "title" : "Home",
+        "iconIdentifier" : null,
+        "code" : null,
+        "createdDate" : 1762554261017.378,
+        "identifier" : "589FD020-3D0E-4EDC-AFDF-4222D0C92E94",
+        "pageDescription" : null,
+        "externalPageURL" : null,
+        "children" : [
+
+        ],
+        "manifests" : {
+
+        },
+        "attributes" : {
+          "shouldArchivePage" : true,
+          "customPageEnd" : "",
+          "changedStatuses" : {
+            "default" : true
+          },
+          "shouldFollowLinks" : true,
+          "backgroundColor" : {
+            "shade" : 800,
+            "darkShade" : 500,
+            "darkColorStripId" : "none",
+            "colorStripId" : "none"
+          },
+          "linkOpensInNewWindow" : false,
+          "shouldAllowPreview" : true,
+          "enabled" : true,
+          "customCSS" : "",
+          "customPageStart" : "",
+          "shouldEnableSocialTags" : true,
+          "shouldIndexPage" : true,
+          "useCustomSiteTitle" : false,
+          "customJavaScript" : "",
+          "customBodyStart" : "",
+          "hidden" : false,
+          "shouldIndexImages" : true,
+          "customBodyEnd" : "",
+          "encoding" : 1,
+          "shouldEnableRobotTags" : true,
+          "customHeader" : "",
+          "customHeadEnd" : "",
+          "customSiteTitle" : "",
+          "lastChangedDate" : 1762699078938.9438,
+          "customHeadStart" : "",
+          "filename" : "index.php",
+          "excludeFromSitemap" : false,
+          "expiryQuantity" : 2,
+          "expires" : false,
+          "expiryUnit" : 0,
+          "credit" : true
+        }
+      },
+      {
+        "kind" : "page",
+        "uniqueID" : "page1",
+        "isIndex" : false,
+        "expanded" : true,
+        "browserTitle" : null,
+        "title" : "Secrets",
+        "iconIdentifier" : null,
+        "code" : null,
+        "createdDate" : 1762698271358.696,
+        "identifier" : "32468F6B-7CCD-4E1E-A2C7-854E3CBFF55E",
+        "pageDescription" : null,
+        "externalPageURL" : null,
+        "children" : [
+
+        ],
+        "manifests" : {
+
+        },
+        "attributes" : {
+          "shouldArchivePage" : true,
+          "customPageEnd" : "",
+          "changedStatuses" : {
+            "default" : true
+          },
+          "shouldFollowLinks" : true,
+          "backgroundColor" : {
+            "shade" : 500,
+            "darkShade" : 500,
+            "darkColorStripId" : "none",
+            "colorStripId" : "none"
+          },
+          "linkOpensInNewWindow" : false,
+          "shouldAllowPreview" : true,
+          "enabled" : true,
+          "customCSS" : "",
+          "customPageStart" : "",
+          "shouldEnableSocialTags" : true,
+          "shouldIndexPage" : true,
+          "useCustomSiteTitle" : false,
+          "customJavaScript" : "",
+          "customBodyStart" : "",
+          "hidden" : false,
+          "shouldIndexImages" : true,
+          "customBodyEnd" : "",
+          "encoding" : 1,
+          "shouldEnableRobotTags" : true,
+          "customHeader" : "",
+          "customHeadEnd" : "",
+          "customSiteTitle" : "",
+          "lastChangedDate" : 1762699099577.0369,
+          "customHeadStart" : "",
+          "filename" : "index.php",
+          "excludeFromSitemap" : false,
+          "expiryQuantity" : 2,
+          "expires" : false,
+          "expiryUnit" : 0,
+          "credit" : true
+        }
+      }
+    ],
+    "manifests" : {
+
+    },
+    "attributes" : {
+      "shouldArchivePage" : true,
+      "customPageEnd" : "",
+      "changedStatuses" : {
+
+      },
+      "shouldFollowLinks" : true,
+      "linkOpensInNewWindow" : false,
+      "shouldAllowPreview" : true,
+      "enabled" : true,
+      "customCSS" : "",
+      "customPageStart" : "",
+      "shouldEnableSocialTags" : true,
+      "shouldIndexPage" : true,
+      "useCustomSiteTitle" : false,
+      "customJavaScript" : "",
+      "customBodyStart" : "",
+      "hidden" : false,
+      "shouldIndexImages" : true,
+      "customBodyEnd" : "",
+      "encoding" : 1,
+      "shouldEnableRobotTags" : true,
+      "customHeader" : "",
+      "customHeadEnd" : "",
+      "customSiteTitle" : "",
+      "lastChangedDate" : 1762554261003.531,
+      "customHeadStart" : "",
+      "filename" : "",
+      "excludeFromSitemap" : true,
+      "expiryQuantity" : 2,
+      "expires" : false,
+      "expiryUnit" : 0,
+      "credit" : true
+    }
+  },
+  "site" : {
+    "minifyExtraFiles" : true,
+    "baseURL" : "https:\/\/www.realmacsoftware.com",
+    "defaultFileExtension" : "html",
+    "themeName" : "Elements",
+    "allowDarkMode" : true,
+    "useCacheBusting" : true,
+    "consolidateCSSFiles" : true,
+    "cruftlessLinks" : true,
+    "title" : "My Website",
+    "wantsXMLSiteMap" : true
+  },
+  "social" : {
+    "useSocialTags" : true
+  },
+  "identifier" : "FC10B4F6-A306-4D33-A8F0-EFA1C56BF296",
   "ui" : {
+    "projectInspector" : {
+      "show" : false
+    },
     "catalogFilter" : {
       "smartDocumentElements" : false,
       "showFavourites" : false
     },
-    "elementEditor" : {
-      "showOutline" : false,
-      "show" : false
-    },
-    "resourceInspector" : {
-      "show" : false
-    },
     "contentArea" : {
       "size" : [
-        1321,
-        988
+        1297,
+        984
       ],
+      "scale" : 0.8635312259059368,
       "responsiveSize" : "lg",
-      "scale" : 1,
-      "darkAppearance" : true
+      "darkAppearance" : false
     },
-    "projectInspector" : {
+    "elementEditor" : {
+      "show" : false,
+      "showOutline" : false
+    },
+    "resourceInspector" : {
       "show" : false
     }
   },
   "images" : {
     "webIcons" : {
+      "pinnedTab" : {
+        "autoGenerate" : false,
+        "type" : 3
+      },
       "faviconMedium" : {
         "autoGenerate" : false,
         "type" : 5
+      },
+      "medium" : {
+        "autoGenerate" : false,
+        "type" : 1
       },
       "small" : {
         "autoGenerate" : false,
@@ -72,225 +386,83 @@
       "faviconLarge" : {
         "autoGenerate" : false,
         "type" : 4
-      },
-      "medium" : {
-        "autoGenerate" : false,
-        "type" : 1
-      },
-      "pinnedTab" : {
-        "autoGenerate" : false,
-        "type" : 3
       }
     },
     "logoAltText" : ""
   },
-  "globalElements" : {
-    "globals" : {
-
-    }
-  },
-  "rootPage" : {
-    "code" : null,
-    "isIndex" : false,
-    "expanded" : true,
-    "identifier" : "008DDB7B-780F-46A7-91C0-4116A6288AA9",
-    "manifests" : {
-
-    },
-    "kind" : "folder",
-    "iconIdentifier" : null,
-    "children" : [
-      {
-        "code" : null,
-        "isIndex" : true,
-        "expanded" : true,
-        "identifier" : "589FD020-3D0E-4EDC-AFDF-4222D0C92E94",
-        "manifests" : {
-
-        },
-        "kind" : "page",
-        "iconIdentifier" : null,
-        "children" : [
-
-        ],
-        "createdDate" : 1762554261017.378,
-        "browserTitle" : null,
-        "title" : "Home",
-        "pageDescription" : null,
-        "externalPageURL" : null,
-        "attributes" : {
-          "changedStatuses" : {
-            "default" : true
-          },
-          "customBodyEnd" : "",
-          "enabled" : true,
-          "expiryQuantity" : 2,
-          "shouldIndexImages" : true,
-          "customJavaScript" : "",
-          "linkOpensInNewWindow" : false,
-          "excludeFromSitemap" : false,
-          "customCSS" : "",
-          "shouldArchivePage" : true,
-          "customHeadStart" : "",
-          "lastChangedDate" : 1762698173657.682,
-          "expires" : false,
-          "customHeader" : "",
-          "credit" : true,
-          "encoding" : 1,
-          "hidden" : false,
-          "filename" : "index.php",
-          "customBodyStart" : "",
-          "shouldEnableSocialTags" : true,
-          "shouldEnableRobotTags" : true,
-          "shouldFollowLinks" : true,
-          "shouldIndexPage" : true,
-          "customHeadEnd" : "",
-          "customPageStart" : "",
-          "customPageEnd" : "",
-          "backgroundColor" : {
-            "colorStripId" : "none",
-            "darkColorStripId" : "none",
-            "darkShade" : 500,
-            "shade" : 800
-          },
-          "expiryUnit" : 0,
-          "shouldAllowPreview" : true,
-          "useCustomSiteTitle" : false,
-          "customSiteTitle" : ""
-        },
-        "uniqueID" : "page0"
-      }
-    ],
-    "createdDate" : 1762554261003.568,
-    "browserTitle" : null,
-    "title" : "root",
-    "pageDescription" : null,
-    "externalPageURL" : null,
-    "attributes" : {
-      "changedStatuses" : {
-
-      },
-      "customBodyEnd" : "",
-      "enabled" : true,
-      "expiryQuantity" : 2,
-      "shouldIndexImages" : true,
-      "customJavaScript" : "",
-      "linkOpensInNewWindow" : false,
-      "excludeFromSitemap" : true,
-      "customCSS" : "",
-      "shouldArchivePage" : true,
-      "customHeadStart" : "",
-      "lastChangedDate" : 1762554261003.531,
-      "expires" : false,
-      "customHeader" : "",
-      "credit" : true,
-      "encoding" : 1,
-      "hidden" : false,
-      "filename" : "",
-      "customBodyStart" : "",
-      "shouldEnableSocialTags" : true,
-      "shouldEnableRobotTags" : true,
-      "shouldFollowLinks" : true,
-      "shouldIndexPage" : true,
-      "customHeadEnd" : "",
-      "customPageStart" : "",
-      "customPageEnd" : "",
-      "expiryUnit" : 0,
-      "shouldAllowPreview" : true,
-      "useCustomSiteTitle" : false,
-      "customSiteTitle" : ""
-    },
-    "uniqueID" : "008DDB7B-780F-46A7-91C0-4116A6288AA9"
-  },
   "theme" : {
-    "spacing" : [
-
-    ],
-    "shadows" : [
-
-    ],
-    "borderWidth" : [
-
-    ],
-    "borderRadius" : [
-
-    ],
     "typographies" : [
-
-    ],
-    "colors" : [
 
     ],
     "screens" : [
       {
-        "maxContainerWidth" : 0,
-        "pixels" : 1536,
-        "name" : "2xl",
-        "sfIcon" : "desktopcomputer",
-        "description" : "",
-        "units" : "auto",
         "id" : "A9AE7347-041F-4D81-BBE8-AC6D9D974C33",
         "classPrefix" : "2xl",
-        "enabled" : false
+        "enabled" : false,
+        "name" : "2xl",
+        "sfIcon" : "desktopcomputer",
+        "units" : "auto",
+        "description" : "",
+        "pixels" : 1536,
+        "maxContainerWidth" : 0
       },
       {
         "maxContainerWidth" : 0,
-        "pixels" : 1280,
-        "name" : "xl",
+        "description" : "",
         "sfIcon" : "laptopcomputer",
-        "description" : "",
-        "units" : "auto",
-        "id" : "01978A43-F70D-42DF-9CAB-206B49D2FAA0",
+        "enabled" : false,
+        "name" : "xl",
+        "pixels" : 1280,
         "classPrefix" : "xl",
-        "enabled" : false
+        "id" : "01978A43-F70D-42DF-9CAB-206B49D2FAA0",
+        "units" : "auto"
       },
       {
-        "maxContainerWidth" : 0,
-        "pixels" : 1024,
-        "name" : "lg",
-        "sfIcon" : "ipad.landscape",
-        "description" : "",
-        "units" : "auto",
         "id" : "791ECCB8-5736-421B-8E26-39DFE5B13E14",
         "classPrefix" : "lg",
-        "enabled" : true
-      },
-      {
-        "maxContainerWidth" : 0,
-        "pixels" : 768,
-        "name" : "md",
-        "sfIcon" : "ipad",
-        "description" : "This breakpoint is for tablets and small laptop screens. It usually encompasses widths from 600 pixels to 1023 pixels.",
+        "enabled" : true,
+        "name" : "lg",
         "units" : "auto",
-        "id" : "B510799F-30CF-4EC8-A0A6-290036324AC6",
-        "classPrefix" : "md",
-        "enabled" : true
-      },
-      {
-        "maxContainerWidth" : 0,
-        "pixels" : 640,
-        "name" : "sm",
-        "sfIcon" : "iphone.landscape",
-        "description" : "This breakpoint targets devices with small sceens like smartphones. The resolution width varies but typically starts from 320 pixels and below 600 pixels.",
-        "units" : "auto",
-        "id" : "C1BF13B5-2D7A-4A36-A430-463B5BE8B1D3",
-        "classPrefix" : "sm",
-        "enabled" : true
-      },
-      {
-        "maxContainerWidth" : 0,
-        "pixels" : 0,
-        "name" : "mobile",
-        "sfIcon" : "iphone",
+        "sfIcon" : "ipad.landscape",
         "description" : "",
-        "units" : "auto",
+        "pixels" : 1024,
+        "maxContainerWidth" : 0
+      },
+      {
+        "maxContainerWidth" : 0,
+        "description" : "This breakpoint is for tablets and small laptop screens. It usually encompasses widths from 600 pixels to 1023 pixels.",
+        "sfIcon" : "ipad",
+        "enabled" : true,
+        "name" : "md",
+        "pixels" : 768,
+        "classPrefix" : "md",
+        "id" : "B510799F-30CF-4EC8-A0A6-290036324AC6",
+        "units" : "auto"
+      },
+      {
+        "maxContainerWidth" : 0,
+        "description" : "This breakpoint targets devices with small sceens like smartphones. The resolution width varies but typically starts from 320 pixels and below 600 pixels.",
+        "sfIcon" : "iphone.landscape",
+        "enabled" : true,
+        "name" : "sm",
+        "pixels" : 640,
+        "classPrefix" : "sm",
+        "id" : "C1BF13B5-2D7A-4A36-A430-463B5BE8B1D3",
+        "units" : "auto"
+      },
+      {
         "id" : "8F18D1E7-5633-4765-843D-25F8DFC6FC10",
         "classPrefix" : "",
-        "enabled" : true
+        "enabled" : true,
+        "name" : "mobile",
+        "sfIcon" : "iphone",
+        "units" : "auto",
+        "description" : "",
+        "pixels" : 0,
+        "maxContainerWidth" : 0
       }
     ],
-    "baseThemeIdentifier" : "com.realmacsoftware.themes.system",
-    "fontFamily" : [
+    "spacing" : [
 
     ],
     "page" : {
@@ -299,155 +471,43 @@
     "fontStyle" : [
 
     ],
+    "borderWidth" : [
+
+    ],
+    "colors" : [
+
+    ],
+    "baseThemeIdentifier" : "com.realmacsoftware.themes.system",
+    "fontFamily" : [
+
+    ],
     "textShadows" : [
+
+    ],
+    "borderRadius" : [
+
+    ],
+    "shadows" : [
 
     ]
   },
-  "site" : {
-    "cruftlessLinks" : true,
-    "baseURL" : "https:\/\/www.realmacsoftware.com",
-    "useCacheBusting" : true,
-    "themeName" : "Elements",
-    "defaultFileExtension" : "html",
-    "wantsXMLSiteMap" : true,
-    "allowDarkMode" : true,
-    "title" : "My Website",
-    "consolidateCSSFiles" : true,
-    "minifyExtraFiles" : true
-  },
-  "identifier" : "FC10B4F6-A306-4D33-A8F0-EFA1C56BF296",
-  "siteResources" : {
-    "resources" : {
-      "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A" : {
-        "name" : "Resources",
-        "expanded" : true,
-        "identifier" : "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A",
-        "kind" : 0,
-        "hostedImageURLs" : [
+  "rootPrefabNode" : {
+    "identifier" : "E6DB23D9-C943-4C00-B1BC-4F65C82BD020",
+    "children" : [
 
-        ],
-        "changedStatuses" : {
+    ],
+    "expanded" : true,
+    "item" : null,
+    "kind" : {
+      "folder" : {
 
-        },
-        "timeStamp" : -62135769600000,
-        "smartFolderKind" : 0
-      },
-      "5329E503-CC6A-42F2-B1B3-758B18C03C52" : {
-        "name" : "flower.svg",
-        "expanded" : true,
-        "identifier" : "5329E503-CC6A-42F2-B1B3-758B18C03C52",
-        "isSVG" : true,
-        "originalName" : "flower.svg",
-        "parentIdentifier" : "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A",
-        "kind" : 1,
-        "typeIdentifier" : "public.svg-image",
-        "changedStatuses" : {
-
-        },
-        "timeStamp" : 1750416112256.6924,
-        "hostedImageURLs" : [
-
-        ],
-        "smartFolderKind" : 0
       }
     },
-    "children" : {
-      "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A" : [
-        "5329E503-CC6A-42F2-B1B3-758B18C03C52"
-      ]
-    },
-    "root" : "84E7CBD7-4CC3-49AA-A7A7-E451BC0A278A"
+    "title" : "Project"
   },
-  "project" : {
-    "uniqueBackupName" : "28BB8126-9BFC-47AF-BB59-863BE825C9F3_rwbackup",
-    "autoStartWebServer" : false
-  },
-  "customComponents" : {
-    "components" : {
-      "D8BDC494-EBD2-4FA2-99AD-95301AFB1AFA" : {
-        "author" : "",
-        "uuid" : "02301DB4-170D-4059-B2ED-3A72C8EE5FE9",
-        "identifier" : "D8BDC494-EBD2-4FA2-99AD-95301AFB1AFA",
-        "version" : "",
-        "tags" : [
+  "globalElements" : {
+    "globals" : {
 
-        ],
-        "group" : "Custom",
-        "deprecated" : false,
-        "build" : "",
-        "collections" : [
-
-        ],
-        "files" : [
-          {
-            "kind" : {
-              "template" : {
-
-              }
-            },
-            "identifier" : "0924EB7D-8E81-4EBE-B2CD-B4AD1E2EAB18",
-            "content" : "@portal(pageStart)\n<?php\nsession_start();\n\n$pagePassword = 'changeme';\n$errorMessage = null;\n\nif (isset($_GET['logout'])) {\n    unset($_SESSION['authenticated']);\n    header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?'));\n    exit;\n}\n\nif (!empty($_POST['password'])) {\n    if (hash_equals($pagePassword, $_POST['password'])) {\n        $_SESSION['authenticated'] = true;\n    } else {\n        $errorMessage = 'Incorrect password. Please try again.';\n    }\n}\n\n$isAuthenticated = !empty($_SESSION['authenticated']);\n?>\n@endportal\n\n    <?php if (!$isAuthenticated): ?>\n        <div class=\"w-full max-w-sm\">\n            <div class=\"bg-slate-900\/60 backdrop-blur border border-slate-700 rounded-xl shadow-lg p-8\">\n                <h1 class=\"text-xl font-semibold mb-2 text-white\">Enter Password<\/h1>\n                <p class=\"text-sm text-slate-300 mb-6\">This page is locked. Please enter the password to continue.<\/p>\n                <?php if ($errorMessage): ?>\n                    <div class=\"mb-4 rounded-lg bg-red-500\/20 border border-red-500\/50 text-red-200 px-3 py-2 text-sm\">\n                        <?= htmlspecialchars($errorMessage, ENT_QUOTES, 'UTF-8') ?>\n                    <\/div>\n                <?php endif; ?>\n                <form method=\"post\" class=\"space-y-4\" x-data=\"{ isProcessing: false }\" x-on:submit=\"isProcessing = true\">\n                    <div>\n                        <label for=\"password\" class=\"block text-sm font-medium text-slate-200 mb-1\">Password<\/label>\n                        <input\n                            type=\"password\"\n                            name=\"password\"\n                            id=\"password\"\n                            required\n                            class=\"w-full rounded-lg border border-slate-700 bg-slate-900\/70 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition\"\n                            placeholder=\"••••••••\"\n                        >\n                    <\/div>\n                    <button\n                        type=\"submit\"\n                        class=\"inline-flex w-full items-center justify-center rounded-lg bg-blue-500 hover:bg-blue-400 active:bg-blue-600 px-4 py-2 font-medium text-white transition disabled:opacity-60 disabled:cursor-not-allowed\"\n                        x-bind:disabled=\"isProcessing\"\n                    >\n                        <span x-show=\"!isProcessing\">Unlock<\/span>\n                        <span x-cloak x-show=\"isProcessing\" class=\"flex items-center gap-2\">\n                            <svg class=\"h-4 w-4 animate-spin\" viewBox=\"0 0 24 24\" fill=\"none\">\n                                <circle class=\"opacity-25\" cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"4\"><\/circle>\n                                <path class=\"opacity-75\" fill=\"currentColor\" d=\"M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z\"><\/path>\n                            <\/svg>\n                            Processing...\n                        <\/span>\n                    <\/button>\n                <\/form>\n            <\/div>\n        <\/div>\n    <?php else: ?>\n        <div class=\"w-full max-w-2xl\">\n            <div class=\"bg-slate-900\/60 backdrop-blur border border-slate-700 rounded-xl shadow-lg p-10 space-y-6\">\n                <div class=\"flex items-center justify-between\">\n                    <div>\n                        <p class=\"text-sm uppercase tracking-wide text-blue-400\">Access Granted<\/p>\n                        <h1 class=\"text-2xl font-semibold text-white mt-1\">Welcome to the protected content<\/h1>\n                    <\/div>\n                    <a href=\"?logout=1\" class=\"inline-flex items-center rounded-lg border border-slate-700 px-3 py-2 text-sm text-slate-300 hover:bg-slate-800 transition\">\n                        Log out\n                    <\/a>\n                <\/div>\n                <div class=\"prose prose-invert max-w-none\">\n                    <p>\n                        This is your protected page. Replace this content with whatever should only be visible to authenticated viewers.\n                    <\/p>\n                    <p class=\"text-slate-300\">\n                        Tailwind CSS provides the layout and styling, while Alpine.js handles a tiny bit of interactivity for the loading state.\n                    <\/p>\n                <\/div>\n            <\/div>\n        <\/div>\n    <?php endif; ?>",
-            "filename" : "Template"
-          },
-          {
-            "kind" : {
-              "css" : {
-
-              }
-            },
-            "identifier" : "E40CD8AF-EF90-4BFF-9FCE-E19917A5B55F",
-            "content" : "",
-            "filename" : "Styles"
-          },
-          {
-            "kind" : {
-              "js" : {
-
-              }
-            },
-            "identifier" : "28E57E6C-F46D-433A-9CAB-195453952EF1",
-            "content" : "console.log(`Running JS for element with id: {{id}}`)",
-            "filename" : "Javascript"
-          },
-          {
-            "kind" : {
-              "hooks" : {
-
-              }
-            },
-            "identifier" : "73303F16-FA67-470E-AA51-FF08318198AE",
-            "content" : "",
-            "filename" : "Hooks"
-          },
-          {
-            "kind" : {
-              "properties" : {
-
-              }
-            },
-            "identifier" : "DC7214DB-2329-42F1-BBDC-96B82231C8B5",
-            "content" : "",
-            "filename" : "Properties"
-          },
-          {
-            "kind" : {
-              "data" : {
-
-              }
-            },
-            "identifier" : "0CC96221-D2CB-41E3-A20A-43C5FD23C2CA",
-            "content" : "{\n    \"collections\": [{\n        \"id\" : \"F8A7DF12-9196-4EF0-A1DB-C35F39401941\",\n        \"title\" : \"Features\",\n        \"items\" : [{\n            \"id\" : \"2DA6C715-0A28-4287-9E2B-EA50078AEF23\",\n            \"featureName\" : \"Data Driven\",\n            \"body\" : \"A dynamic and user-friendly platform offering a wide range of services and information.\"\n        }]\n    }]\n}",
-            "filename" : "Data"
-          }
-        ],
-        "hidden" : false,
-        "title" : "Protect Content",
-        "subTitle" : ""
-      }
     }
-  },
-  "privacy" : {
-    "anonymiseThirdPartyRequests" : false
-  },
-  "version" : 9
+  }
 }

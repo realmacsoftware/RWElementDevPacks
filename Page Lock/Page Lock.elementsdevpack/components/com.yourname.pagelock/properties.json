@@ -1,13 +1,19 @@
 {
-    "groups": [{
+    "groups": [
+        {
         "title": "Lock Settings",
-        "properties": [{
+        "properties": [
+            {
             "title": "Show Login",
             "id": "showLogin",
             "responsive": false,
             "switch": {
-                "default": true
+                "default": false
             }
+        },
+        {
+            "information": {},
+            "title": "Ensure your page is set to .php"
         },
         {
             "title": "Password",
