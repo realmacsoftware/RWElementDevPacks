@@ -1,0 +1,19 @@
+{
+  "name": "build-tools-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rw-build all",
+    "build:properties": "rw-build properties",
+    "build:hooks": "rw-build hooks",
+    "dev": "rw-build all --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "rw-elements-tools": "^1.2.1"
+  }
+}

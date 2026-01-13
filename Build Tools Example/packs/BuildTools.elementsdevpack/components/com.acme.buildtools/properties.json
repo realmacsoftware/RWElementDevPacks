@@ -1,0 +1,301 @@
+{
+  "groups": [
+    {
+      "title": "Content",
+      "properties": [
+        {
+          "title": "Message",
+          "id": "message",
+          "text": {
+            "default": "Hello, World!"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Spacing",
+      "properties": [
+        {
+          "title": "Margin & Padding",
+          "heading": {}
+        },
+        {
+          "title": "Enable",
+          "id": "globalSpacingEnabled",
+          "switch": {
+            "default": false
+          }
+        },
+        {
+          "title": "Margin",
+          "id": "globalMargin",
+          "themeSpacing": {
+            "mode": "margin",
+            "default": {
+              "base": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0"
+              }
+            }
+          },
+          "visible": "globalSpacingEnabled == true"
+        },
+        {
+          "title": "Padding",
+          "id": "globalPadding",
+          "themeSpacing": {
+            "mode": "padding",
+            "default": {
+              "base": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0"
+              }
+            }
+          },
+          "visible": "globalSpacingEnabled == true"
+        }
+      ]
+    },
+    {
+      "title": "Borders",
+      "icon": "square.dashed",
+      "properties": [
+        {
+          "title": "Type",
+          "id": "globalControlTypeBorders",
+          "responsive": false,
+          "segmented": {
+            "default": "none",
+            "items": [
+              {
+                "title": "None",
+                "value": "none"
+              },
+              {
+                "title": "Static",
+                "value": "static"
+              },
+              {
+                "title": "Hover",
+                "value": "hover"
+              }
+            ]
+          }
+        },
+        {
+          "visible": "globalControlTypeBorders == 'hover'",
+          "title": "State",
+          "id": "globalBordersState",
+          "responsive": false,
+          "segmented": {
+            "default": "start",
+            "items": [
+              {
+                "title": "Start",
+                "value": "start"
+              },
+              {
+                "title": "End",
+                "value": "end"
+              }
+            ]
+          }
+        },
+        {
+          "divider": {},
+          "visible": "globalControlTypeBorders != 'none'"
+        },
+        {
+          "title": "Style",
+          "id": "globalBordersStyle",
+          "format": "border-{{value}}",
+          "segmented": {
+            "default": "solid",
+            "items": [
+              {
+                "icon": "square",
+                "value": "solid"
+              },
+              {
+                "icon": "square.dashed",
+                "value": "dashed"
+              },
+              {
+                "icon": "square.dotted",
+                "value": "dotted"
+              }
+            ]
+          },
+          "visible": "globalControlTypeBorders == 'static' || (globalControlTypeBorders == 'hover' && globalBordersState == 'start')"
+        },
+        {
+          "title": "Color",
+          "id": "globalBordersColor",
+          "format": "border-{{value}}",
+          "themeColor": {
+            "default": {
+              "name": "surface",
+              "brightness": 500
+            }
+          },
+          "visible": "globalControlTypeBorders == 'static' || (globalControlTypeBorders == 'hover' && globalBordersState == 'start')"
+        },
+        {
+          "title": "Opacity",
+          "id": "globalBordersColorOpacity",
+          "format": "[{{value}}%]",
+          "slider": {
+            "default": 100,
+            "min": 0,
+            "max": 100,
+            "round": true,
+            "snap": true,
+            "units": "%"
+          },
+          "visible": "globalControlTypeBorders == 'static' || (globalControlTypeBorders == 'hover' && globalBordersState == 'start')"
+        },
+        {
+          "title": "Width",
+          "id": "globalBordersWidth",
+          "themeBorderWidth": {
+            "default": {
+              "base": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "linkHorizontal": true,
+                "linkVertical": true
+              }
+            }
+          },
+          "visible": "globalControlTypeBorders == 'static' || (globalControlTypeBorders == 'hover' && globalBordersState == 'start')"
+        },
+        {
+          "title": "Radius",
+          "id": "globalBordersRadius",
+          "format": "{{value}}",
+          "themeBorderRadius": {
+            "default": {
+              "base": {
+                "topLeft": "Default",
+                "topRight": "Default",
+                "bottomLeft": "Default",
+                "bottomRight": "Default"
+              }
+            }
+          },
+          "visible": "globalControlTypeBorders == 'static' || (globalControlTypeBorders == 'hover' && globalBordersState == 'start')"
+        },
+        {
+          "title": "Style",
+          "id": "globalBordersStyleEnd",
+          "format": "border-{{value}}",
+          "segmented": {
+            "default": "solid",
+            "items": [
+              {
+                "icon": "square",
+                "value": "solid"
+              },
+              {
+                "icon": "square.dashed",
+                "value": "dashed"
+              },
+              {
+                "icon": "square.dotted",
+                "value": "dotted"
+              }
+            ]
+          },
+          "visible": "(globalControlTypeBorders == 'hover' && globalBordersState == 'end')"
+        },
+        {
+          "title": "Color",
+          "id": "globalBordersColorEnd",
+          "format": "border-{{value}}",
+          "themeColor": {
+            "default": {
+              "name": "surface",
+              "brightness": 500
+            }
+          },
+          "visible": "(globalControlTypeBorders == 'hover' && globalBordersState == 'end')"
+        },
+        {
+          "title": "Opacity",
+          "id": "globalBordersColorOpacityEnd",
+          "format": "[{{value}}%]",
+          "slider": {
+            "default": 100,
+            "min": 0,
+            "max": 100,
+            "round": true,
+            "snap": true,
+            "units": "%"
+          },
+          "visible": "(globalControlTypeBorders == 'hover' && globalBordersState == 'end')"
+        },
+        {
+          "title": "Width",
+          "id": "globalBordersWidthEnd",
+          "themeBorderWidth": {
+            "default": {
+              "base": {
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "linkHorizontal": true,
+                "linkVertical": true
+              }
+            }
+          },
+          "visible": "(globalControlTypeBorders == 'hover' && globalBordersState == 'end')",
+          "format": "hover:{{value}}"
+        },
+        {
+          "title": "Radius",
+          "id": "globalBordersRadiusEnd",
+          "format": "hover:{{value}}",
+          "themeBorderRadius": {
+            "default": {
+              "base": {
+                "topLeft": "Default",
+                "topRight": "Default",
+                "bottomLeft": "Default",
+                "bottomRight": "Default"
+              }
+            }
+          },
+          "visible": "(globalControlTypeBorders == 'hover' && globalBordersState == 'end')"
+        }
+      ]
+    },
+    {
+      "title": "Advanced",
+      "icon": "gearshape",
+      "properties": [
+        {
+          "title": "CSS Classes",
+          "id": "cssClasses",
+          "textArea": {
+            "default": ""
+          }
+        },
+        {
+          "title": "ID",
+          "id": "globalID",
+          "responsive": false,
+          "text": {
+            "default": ""
+          }
+        }
+      ]
+    }
+  ]
+}

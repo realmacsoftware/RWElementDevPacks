@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "title": "Content",
+      "properties": [
+        {
+          "title": "Message",
+          "id": "message",
+          "text": {
+            "default": "Hello, World!"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Spacing",
+      "properties": [
+        {
+          "globalControl": "Spacing"
+        }
+      ]
+    },
+    {
+      "title": "Borders",
+      "icon": "square.dashed",
+      "properties": [
+        {
+          "globalControl": "Borders"
+        }
+      ]
+    }
+  ]
+}
